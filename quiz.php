@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($total_score >= 30 && $total_score < 60) {
         header("Location: medium_likelihood.html");
         exit();
-    } else if ($total_score >= 60){
+    } else if ($total_score >= 60) {
         header("Location: higher_likelihood.html");
         exit();
     } else {
@@ -53,48 +53,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Autism Quiz</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
-<header>
-       <div class="col-1">
-          <img id="img-1" src="images/logo.png">
-      </div>
-      <div class="col-2">
-          <h1>Freespee Autism Check (FAC)</h1>
-          <h5>Take control of your autism journey</h5>
-      </div>
-      <div class="col-3"><a target="_blank" href="register.php">
-            <button>Registration</button> </a>
-            <button>About us</button> 
-            <button>Contact us</button></div>
-  </header>
-  <nav>
-   <div class="navbar">
-      <a href="index.php">Autism</a>
-      <a href="quiz.php" target="_blank">Quiz</a>
-      <a href="#symptoms">Symptoms</a>
-      <a href="#causes">Causes</a>
-      
-      <a href="login.php">Log in</a>
-  </div>
-</nav>
+    <header>
+        <div class="col-1">
+            <img id="img-1" src="images/logo.png">
+        </div>
+        <div class="col-2">
+            <h1>Freespee Autism Check (FAC)</h1>
+            <h5>Take control of your autism journey</h5>
+        </div>
+        <div class="col-3"><a target="_blank" href="register.php">
+                <button>Registration</button> </a>
+            <button>About us</button>
+            <button>Contact us</button>
+        </div>
+    </header>
+    <nav>
+        <div class="navbar">
+            <a href="index.php">Autism</a>
+            <a href="quiz.php" target="_blank">Quiz</a>
+            <a href="#symptoms">Symptoms</a>
+            <a href="#causes">Causes</a>
+
+            <a href="login.php">Log in</a>
+        </div>
+    </nav>
+    <main class="maincontain">
     <h2>Autism Quiz</h2>
     <form method="post" action="quiz.php">
         <?php
         foreach ($questions as $question => $options) {
-            echo "<p>$question</p>";
+            echo "<h1>$question</h1>";
+            echo "<div class='question'>";
             foreach ($options as $option => $text) {
-                echo "<label><input type='radio' name='".md5($question)."' value='$option'> $text</label><br>";
+                echo "<label><input type='hidden' name='" . md5($question) . "' value='$option'>
+                      <button> $text</button>
+                      </label><br>";
             }
+            echo "</div>";
         }
         ?>
         <br>
         <input type="submit" name="submit" value="Submit">
     </form>
+</main>
+
     <footer class="footer">
         <div class="footer-row">
             <h3 class="follow">follow us</h3>
@@ -110,4 +120,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </footer>
 </body>
+
 </html>
