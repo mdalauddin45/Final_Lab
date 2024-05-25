@@ -24,7 +24,7 @@
   </header>
   <nav>
    <div class="navbar">
-      <a href="index.html">Autism</a>
+      <a href="index.php">Autism</a>
       <a href="#Men">Quiz</a>
       <a href="#Women">Symptoms</a>
       <a href="#Kids">Causes</a>
@@ -84,7 +84,7 @@
              </label>
             </div>
          </div>
-            <button class = "button"><strong>   Submit</strong></button>
+            <button class = "button"><strong>Submit</strong></button>
       </form>
    </div>
 </main>

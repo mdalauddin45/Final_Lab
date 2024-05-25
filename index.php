@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>FAC</title>
+	<title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -23,7 +23,7 @@
   </header>
   <nav>
    <div class="navbar">
-      <a href="index.html">Autism</a>
+      <a href="index.php">Autism</a>
       <a href="quiz.php" target="_blank">Quiz</a>
       <a href="#symptoms">Symptoms</a>
       <a href="#causes">Causes</a>
